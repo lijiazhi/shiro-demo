@@ -1,0 +1,35 @@
+
+spring:
+    datasource:
+      url: jdbc:mysql://localhost:3306/test
+      username: root
+      password: root
+      driver-class-name: com.mysql.jdbc.Driver
+#    redis:
+#        host: localhost
+#        port: 6379
+#        jedis:
+#          pool:
+#            max-idle: 8
+#            min-idle: 0
+#            max-active: 8
+#            max-wait: -1
+#        timeout: 0
+#        password: T4SSqQubVc32g
+#        database: 8
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.entity
+# 打印日志
+logging:
+  level:
+    root: INFO
+    org.spring: DEBUG
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    com.springms: DEBUG
+    com.example.dao: TRACE
+server:
+  port: 8081
+#    path: /log
